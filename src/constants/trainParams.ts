@@ -37,3 +37,24 @@ export const coinsParams = {
   MAX_COINT_TO_WIN_FOR_DEFEAT_BOSS: 1000,
   MIN_COINT_TO_WIN_FOR_DEFEAT_BOSS: 1000,
 };
+
+export const bosses = [
+  {
+    NAME: "Dark cheems",
+    LIFE_POINTS: 100,
+    MIN_ATTACK: 1,
+    MAX_ATTACK: 3,
+  },
+  {
+    NAME: "Dark cheems",
+    LIFE_POINTS: 100,
+    MIN_ATTACK: 10,
+    MAX_ATTACK: 12,
+  },
+  {
+    NAME: "Dark cheems",
+    LIFE_POINTS: 100,
+    MIN_ATTACK: 17,
+    MAX_ATTACK: 20,
+  },
+];

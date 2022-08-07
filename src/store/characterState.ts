@@ -8,11 +8,13 @@ interface CharacterState {
   phase: number;
   attackPoints: number;
   defensePoints: number;
+  adventureIsOver: boolean;
   increaseLife: (amount: number) => void;
   increaseCoins: (amount: number) => void;
   increaseAttackPoints: (amount: number) => void;
   increaseDefensePoints: (amount: number) => void;
   increasePhase: () => void;
+  endAdventure: () => void;
 }
 
 export const useCharacterState = create<CharacterState>((set) => ({
@@ -22,8 +24,12 @@ export const useCharacterState = create<CharacterState>((set) => ({
   phase: 1,
   attackPoints: 1,
   defensePoints: 1,
+  adventureIsOver: false,
   increaseLife: (amount) =>
-    set((state) => ({ life: generateNewAmount(state.life, amount) })),
+    set((state) => {
+      const newLife = generateNewAmount(state.life, amount);
+      return { life: newLife, adventureIsOver: newLife <= 0 };
+    }),
   increaseCoins: (amount) =>
     set((state) => ({ coins: generateNewAmount(state.coins, amount) })),
   increaseAttackPoints: (amount) =>
@@ -50,4 +56,5 @@ export const useCharacterState = create<CharacterState>((set) => ({
       };
     });
   },
+  endAdventure: () => set((state) => ({ adventureIsOver: true })),
 }));
