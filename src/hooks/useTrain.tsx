@@ -41,7 +41,7 @@ export const useTrain = () => {
   };
 
   const trainDefense = () => {
-    const attackToGain = getRandomNumber(
+    const defenseToGain = getRandomNumber(
       trainParams.MIN_WIN_DEFENSE_PONTS,
       trainParams.MAX_WIN_DEFENSE_POINTS
     );
@@ -54,7 +54,7 @@ export const useTrain = () => {
     setIsTraining(true);
 
     setTimeout(() => {
-      increaseDefensePoints(attackToGain);
+      increaseDefensePoints(defenseToGain);
       increaseLife(-lifeToLoose);
       increasePhase();
       setIsTraining(false);

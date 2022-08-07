@@ -28,6 +28,7 @@ export const exploreParams = {
   7: "LOST ATTACK AND DEFENSE",
   8: "LOST LIFE",
   9: "GAIN COINS",
+  10: "LOST COINS",
 };
 
 export const coinsParams = {
