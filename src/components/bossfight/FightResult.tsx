@@ -22,7 +22,7 @@ export const FightResult = () => {
       />
       <Text>
         {won
-          ? "Desacanse joven guerrero, ganaste una batalla, pero no la guerra. Nuevos enemigos vendran para causarle amsiedad a cheems y hay que estrar preparado para la batalla"
+          ? "Desacanse joven guerrero, ganaste una batalla, pero no la guerra. Nuevos enemigos vendran para causarle amsiedad a cheems y hay que estar preparado para la batalla"
           : "Cheems ha perdido y le ha dado amsiedad, puede ayudar a quitarle la amsiedad a cheems volviendolo a intentar"}
       </Text>
     </ModalContainer>
